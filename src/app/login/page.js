@@ -25,7 +25,7 @@ export default function LoginPage() {
     e.preventDefault()
     console.log('Logging in with:', form)
     try {
-      const res = await fetch('http://localhost:4000/api/auth/login', {
+      const res = await fetch('https://itinerarybackend.onrender.com/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),

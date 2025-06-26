@@ -17,7 +17,7 @@ export default function ItineraryDetails() {
 
     const token = localStorage.getItem('token')
 
-    fetch(`http://localhost:4000/api/itineraries/x/${id}`, {
+    fetch(`https://itinerarybackend.onrender.com/api/itineraries/x/${id}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -46,7 +46,7 @@ export default function ItineraryDetails() {
 
     try {
       const res = await fetch(
-        `http://localhost:4000/api/itineraries/${itinerary._id}/locations/${locationToRemove._id}`,
+        `https://itinerarybackend.onrender.com/api/itineraries/${itinerary._id}/locations/${locationToRemove._id}`,
         {
           method: 'DELETE',
           headers: {

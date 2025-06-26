@@ -45,7 +45,7 @@ export default function SingleCityForm() {
   }
 
   try {
-    const res = await fetch('http://localhost:4000/api/itineraries/single-city', {
+    const res = await fetch('https://itinerarybackend.onrender.com/api/itineraries/single-city', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

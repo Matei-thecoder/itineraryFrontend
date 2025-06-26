@@ -15,7 +15,7 @@ export default function MainPage() {
 
   const fetchItineraries = async (userId, token) => {
     try {
-      const res = await fetch(`http://localhost:4000/api/itineraries/getall?userId=${userId}`, {
+      const res = await fetch(`https://itinerarybackend.onrender.com/api/itineraries/getall?userId=${userId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -56,7 +56,7 @@ const handleRemove = async (id) => {
   if (!token) return alert('No auth token found.')
 
   try {
-    const res = await fetch(`http://localhost:4000/api/itineraries/${id}`, {
+    const res = await fetch(`https://itinerarybackend.onrender.com/api/itineraries/${id}`, {
       method: 'DELETE',
       headers: {
         Authorization: `Bearer ${token}`,

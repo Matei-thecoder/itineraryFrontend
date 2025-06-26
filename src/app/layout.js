@@ -14,6 +14,9 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Itinerary App",
   description: "Start your journey with our itinerary planner",
+  icons: {
+    icon: '/favicon.ico', // <-- Update path if you changed the file
+  },
 };
 
 export default function RootLayout({ children }) {
